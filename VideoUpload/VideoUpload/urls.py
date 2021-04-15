@@ -15,14 +15,15 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from uploadfile.views import welcome, success, failed
+from uploadfile.views import welcome, success, failed, upload
 from django.conf import settings
 from django.conf.urls.static import static
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', welcome),
     path('success/', success),
-    path('failed/', failed)
+    path('failed/', failed),
+    path('upload/', upload)
 ]
 
 if settings.DEBUG:
